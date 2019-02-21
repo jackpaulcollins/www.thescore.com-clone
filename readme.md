@@ -41,7 +41,7 @@ Web clone of www.thescore.com
 ## Setup/Installation Requirements
 
 * _clone at_  https://www.github.com/jaypeejay
-* _View live at_ https://jaypeejay.github.io/git-clone/_
+* _View live at_ https://jaypeejay.github.io/www.thescore.com-clone
 
 
 ## Known Bugs
