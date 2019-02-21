@@ -26,21 +26,27 @@ Web clone of www.thescore.com
 
 * _Cloned desktop view:_
 
-![alt text](https://i.imgur.com/URQwJJm.jpg)
-![alt text](https://i.imgur.com/U1zTC0v.png)
+![alt text](https://i.imgur.com/eXB0F4e.jpg)
+
+* _cloned desktop view (minimized):_
+![alt text](https://i.imgur.com/h8T80hN.jpg)
+
+* _cloned mobile view:_
+![alt text](https://i.imgur.com/F4Hmp0p.jpg)
+
 
 
 
 
 ## Setup/Installation Requirements
 
-* _clone at  https://www.github.com/jaypeejay
-* _View live at https://jaypeejay.github.io/git-clone/_
+* _clone at_  https://www.github.com/jaypeejay
+* _View live at_ https://jaypeejay.github.io/git-clone/_
 
 
 ## Known Bugs
 
-_a lot_
+_Currently there are no known bugs_
 
 ## Support and contact details
 

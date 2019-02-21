@@ -1,3 +1,5 @@
+//mixins
+
 @mixin FlexBoxColumn{
   display: flex;
   flex-direction: column;
@@ -9,15 +11,14 @@
   flex-direction: row;
 }
 
+//sass variable
 $black: #000;
 $font-gray: #acacad;
 $background-gray: #1e1f21;
 $light-gray: #393c42;
 $font: 'Open Sans', sans-serif;
 
-
-
-
+//start of styling
 *{
   margin:0;
   padding:0;
@@ -29,8 +30,8 @@ body{
 
 .mainContainer{
   @include FlexBoxColumn;
+  width: 100%;
   align-items: center;
-  overflow: scroll;
   font-family: $font;
 }
 
@@ -81,20 +82,15 @@ body{
   @include FlexBoxColumn;
   width: 80%;
   height: 1800px;
-  border: 1px solid red;
   margin: 10% 0 5% 0;
-
 }
-
 .score-row{
   @include FlexBoxRow;
   justify-content: space-around;
   width: 55vw;
   height: 5%;
   margin: 0 auto 0 auto;
-  border: solid 1px red;
 }
-
 .box{
   @include FlexBoxRow;
   width: 25%;
@@ -106,7 +102,6 @@ body{
   font-size: .9em;
   font-weight: bold;
 }
-
 .team-1{
   @include FlexBoxRow;
   width: 200px;
@@ -116,7 +111,6 @@ body{
       height: 30px;
     }
 }
-
 .team-2{
   @include FlexBoxRow;
   width: 200px;
@@ -126,12 +120,10 @@ body{
       height: 30px;
     }
 }
-
 .column-grid{
   @include FlexBoxRow;
   justify-content: space-around;
   height: 100%;
-  // border: solid green 1px;
 }
 .primary-column{
   @include FlexBoxColumn;
@@ -139,7 +131,6 @@ body{
   width: 70%;
   margin: 5% auto 0 auto;
 }
-
 .head-story{
   @include FlexBoxColumn;
   justify-content: space-between;
@@ -152,7 +143,6 @@ body{
   border-radius: 4px;
   margin: 0 auto 25px auto;
 }
-
 .top-row{
   @include FlexBoxRow;
   justify-content: space-between;
@@ -173,27 +163,24 @@ body{
       font-family: $font;
     }
 }
-
 i {
   display: flex;
   color: white;
 }
-
 .bottom-row {
   @include FlexBoxRow;
   flex-wrap: wrap;
   width: 100%;
   height: 60px;
 }
-
 .headline{
   @include FlexBoxRow;
   color: white;
+  height: 50%;
   font-family: $font;
   font-weight: bold;
   font-size: 18px;
 }
-
 .info {
   @include FlexBoxRow;
   align-self: flex-end;
@@ -209,7 +196,6 @@ i {
   @include FlexBoxColumn;
   font-family: $font;
 }
-
 .related-news-header{
   @include FlexBoxRow;
   justify-content: center;
@@ -227,23 +213,19 @@ i {
       margin: 0 10px 0 10px;
     }
 }
-
 .small-cards{
   @include FlexBoxColumn;
   margin-top: 25px;
   height: 100%;
   width: 100%;
-  border: 1px solid yellow;
   align-content: space-around;
   padding-top: 25px;
 }
-
 .small-card-row{
   display: flex;
   justify-content: space-around;
   height: 100%;
 }
-
 .small-card{
   @include FlexBoxColumn;
   justify-content: space-between;
@@ -276,23 +258,20 @@ i {
   display: flex;
   justify-content: space-between;
 }
-
-  .small-button{
-    display: flex;
-    background-color:  rgba(0, 120, 253, 0.75);
-    font-weight: bold;
-    padding: 0 8px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: 1;
-    height: 20px;
-    width: 40px;
-    font-size: 10px;
-    font-family: $font;
-    margin-left: 5px;
-  }
-
-
+.small-button{
+  display: flex;
+  background-color:  rgba(0, 120, 253, 0.75);
+  font-weight: bold;
+  padding: 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  height: 20px;
+  width: 40px;
+  font-size: 10px;
+  font-family: $font;
+  margin-left: 5px;
+}
 .small-column{
   @include FlexBoxColumn;
   justify-content: space-around;
@@ -302,9 +281,7 @@ i {
 .headlines{
   @include FlexBoxColumn;
   width: 100%;
-
 }
-
 .card{
   @include FlexBoxColumn;
   position: inherit;
@@ -329,38 +306,34 @@ i {
       display: inline-block;
       width: 1em;
       margin-left: .25em;
-}
-    .card-title{
-      display: flex;
-      align-items: center;
-      height: 50px;
-      width: 100%;
-      background-color: $background-gray;
-      text-align: center;
-      font-family: $font;
-      font-size: 1.2em;
-      padding: 0 0 0 15px;
-      font-weight: bold;
-      color: $font-gray;
     }
+  }
+.card-title{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: $background-gray;
+  text-align: center;
+  font-family: $font;
+  font-size: 1.2em;
+  padding: 0 0 0 15px;
+  font-weight: bold;
+  color: $font-gray;
 }
-
 .small-column-card-row{
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100%;
 }
-
 .small-column-cards{
   @include FlexBoxColumn;
   width: 100%;
   height: 80%;
-  border: solid green 1px;
   align-items: center;
   justify-content: space-around;
 }
-
 .small-column-card{
   @include FlexBoxColumn;
   justify-content: space-between;
@@ -373,31 +346,12 @@ i {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-
-
-
-
-
-  @media screen and (max-width: 1700px) {
-    .smallColumn {
-      display: none;
-    }
-
-
-    .primaryColumn{
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
 .foot{
   display: flex;
   width: 100%;
-  height: 50%;
+  height: 70%;
   background-color: $background-gray;
-  border: solid red 1px;
 }
-
 .left{
   @include FlexBoxColumn;
   width: 30%;
@@ -435,27 +389,95 @@ i {
       border-radius: 5px;
       width: 100px;
       height: 50px;
-    }
+  }
 }
+//media queries
+@media screen and (max-width: 1250px) {
+  .small-column {
+    display: none;
+  }
+  .nav-bar-left{
+    flex-wrap: wrap;
+  }
+  .hamburger{
+    display: none;
+  }
 
-  @media screen and (max-width: 1699px) {
-    .smallColumn {
+  .score-row{
+    display: none;
+  }
+  .headStory{
+    margin-top: 10%;
+    width: 55vw;
+    height: 100%;
+  }
+  .related-news-header{
+    span{
       display: none;
     }
+  }
+  .related-news-links{
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .info{
+    display: none;
+  }
+  .column-grid{
+    @include FlexBoxColumn;
+  }
+  .primary-column{
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+  }
+  .small-cards{
+    width: 100%;
+    height: 100%;
+  }
+  .middle{
+    display: none;
+  }
+  .right{
+    display: none;
+  }
+  .foot{
+    justify-content: center;
+    justify-content: space-around;
+  }
+  .primaryColumn{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-    .scoreRow{
-      flex-wrap: wrap;
-      overflow-x: scroll;
-    }
-
-    .headStory{
-      margin-top: 10%;
-      width: 55vw;
-      height: 20vh;
-    }
-
-    .primaryColumn{
-      margin-left: auto;
-      margin-right: auto;
+@media screen and (max-width: 500px){
+  .nav-bar-left{
+    display: none;
+  }
+  .nav-bar{
+    display: flex;
+    justify-content: center;
+    .nav-bar-right{
+      margin: 0 auto 0 auto;
+      button{
+        height: 60px;
+        width: 150px;
+        font-size: 15px;
+        padding: auto;
+      }
     }
   }
+  .head-story{
+    height: 500px;
+    width: 300px;
+    margin: 50px auto 0 auto ;
+  }
+  .small-card-row{
+    flex-wrap: wrap;
+  }
+  .small-card{
+    height: 180px;
+    width: 200px;
+  }
+}
