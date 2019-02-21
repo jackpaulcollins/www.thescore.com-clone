@@ -1,0 +1,461 @@
+@mixin FlexBoxColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+//reset default to row since entire container is set to col
+@mixin FlexBoxRow{
+  display: flex;
+  flex-direction: row;
+}
+
+$black: #000;
+$font-gray: #acacad;
+$background-gray: #1e1f21;
+$light-gray: #393c42;
+$font: 'Open Sans', sans-serif;
+
+
+
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background-color: #000;
+}
+
+.mainContainer{
+  @include FlexBoxColumn;
+  align-items: center;
+  overflow: scroll;
+  font-family: $font;
+}
+
+.nav-bar{
+  @include FlexBoxRow;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  justify-content: space-between;
+  align-content: center;
+  background-color: $background-gray;
+  font-family: $font;
+  font-weight: bold;
+  font-size: .8em;
+  color: $font-gray
+}
+
+.nav-bar-left{
+  @include FlexBoxRow;
+  width: 30vw;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 15%;
+  flex-wrap: wrap;
+    p{
+      margin-top: 12px;
+    }
+}
+
+.nav-bar-right{
+  @include FlexBoxRow;
+  margin-right: 15%;
+  justify-content: center;
+  align-items: center;
+    button{
+      @include FlexBoxRow;
+      align-content: center;
+      height: 30px;
+      font-family: $font;
+      font-weight: bold;
+      font-size: 1em;
+    }
+}
+
+.main-content{
+  @include FlexBoxColumn;
+  width: 80%;
+  height: 1800px;
+  border: 1px solid red;
+  margin: 10% 0 5% 0;
+
+}
+
+.score-row{
+  @include FlexBoxRow;
+  justify-content: space-around;
+  width: 55vw;
+  height: 5%;
+  margin: 0 auto 0 auto;
+  border: solid 1px red;
+}
+
+.box{
+  @include FlexBoxRow;
+  width: 25%;
+  background-color: $background-gray;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  font-family: $font;
+  color: $font-gray;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.team-1{
+  @include FlexBoxRow;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+    img{
+      height: 30px;
+    }
+}
+
+.team-2{
+  @include FlexBoxRow;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+    img{
+      height: 30px;
+    }
+}
+
+.column-grid{
+  @include FlexBoxRow;
+  justify-content: space-around;
+  height: 100%;
+  // border: solid green 1px;
+}
+.primary-column{
+  @include FlexBoxColumn;
+  height: 80%;
+  width: 70%;
+  margin: 5% auto 0 auto;
+}
+
+.head-story{
+  @include FlexBoxColumn;
+  justify-content: space-between;
+  width: 70%;
+  height: 40%;
+  background-image: url("../imgs/lillard.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: solid 1px gray;
+  border-radius: 4px;
+  margin: 0 auto 25px auto;
+}
+
+.top-row{
+  @include FlexBoxRow;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+    .large-button{
+      display: flex;
+      background-color:  rgba(0, 120, 253, 0.75);
+      font-weight: bold;
+      padding: 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1;
+      height: 18px;
+      width: 48px;
+      font-size: 13px;
+      font-family: $font;
+    }
+}
+
+i {
+  display: flex;
+  color: white;
+}
+
+.bottom-row {
+  @include FlexBoxRow;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 60px;
+}
+
+.headline{
+  @include FlexBoxRow;
+  color: white;
+  font-family: $font;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.info {
+  @include FlexBoxRow;
+  align-self: flex-end;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+  font-weight: bold;
+    i{
+      color: blue;
+    }
+}
+.related-news{
+  @include FlexBoxColumn;
+  font-family: $font;
+}
+
+.related-news-header{
+  @include FlexBoxRow;
+  justify-content: center;
+  color: $font-gray;
+  font-weight: bold;
+    h5{
+      margin: 8px 10px 10px 10px;
+    }
+}
+.related-news-links{
+  @include FlexBoxRow;
+  justify-content: center;
+  color: $font-gray;
+    p{
+      margin: 0 10px 0 10px;
+    }
+}
+
+.small-cards{
+  @include FlexBoxColumn;
+  margin-top: 25px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid yellow;
+  align-content: space-around;
+  padding-top: 25px;
+}
+
+.small-card-row{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.small-card{
+  @include FlexBoxColumn;
+  justify-content: space-between;
+  width: 40%;
+  height: 90%;
+  margin-bottom: 20px;
+  border: .5px solid gray;
+  border-radius: 5px;
+  padding: 3px;
+  background-image: url("../imgs/lillard.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.small-card-head{
+  display: flex;
+  height: 20%;
+  justify-content: space-between;
+}
+.small-card-foot{
+  @include FlexBoxColumn;
+  height: 20%;
+  justify-content: space-between;
+  color: white;
+  font-size: 10px;
+}
+.small-card-report{
+  display: flex;
+}
+.small-card-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+  .small-button{
+    display: flex;
+    background-color:  rgba(0, 120, 253, 0.75);
+    font-weight: bold;
+    padding: 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+    height: 20px;
+    width: 40px;
+    font-size: 10px;
+    font-family: $font;
+    margin-left: 5px;
+  }
+
+
+.small-column{
+  @include FlexBoxColumn;
+  justify-content: space-around;
+  height: 100%;
+  width: 29%;
+}
+.headlines{
+  @include FlexBoxColumn;
+  width: 100%;
+
+}
+
+.card{
+  @include FlexBoxColumn;
+  position: inherit;
+  margin: 60px 0 20px 0;
+  width: 100%;
+  height: 100%;
+  background-color: $light-gray;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: white;
+  font-family: $font;
+  font-size: .8em;
+    ul {
+      list-style: none;
+      margin-left: 10px;
+      line-height: 40px;
+    }
+    ul li::before {
+      content: "\2022";
+      color: blue;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: .25em;
+}
+    .card-title{
+      display: flex;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      background-color: $background-gray;
+      text-align: center;
+      font-family: $font;
+      font-size: 1.2em;
+      padding: 0 0 0 15px;
+      font-weight: bold;
+      color: $font-gray;
+    }
+}
+
+.small-column-card-row{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.small-column-cards{
+  @include FlexBoxColumn;
+  width: 100%;
+  height: 80%;
+  border: solid green 1px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.small-column-card{
+  @include FlexBoxColumn;
+  justify-content: space-between;
+  height: 80%;
+  width: 90%;
+  border: .5px solid gray;
+  border-radius: 5px;
+  padding: 3px;
+  background-image: url("../imgs/lillard.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+  @media screen and (max-width: 1700px) {
+    .smallColumn {
+      display: none;
+    }
+
+
+    .primaryColumn{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+.foot{
+  display: flex;
+  width: 100%;
+  height: 50%;
+  background-color: $background-gray;
+  border: solid red 1px;
+}
+
+.left{
+  @include FlexBoxColumn;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.middle{
+  @include FlexBoxColumn;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.right{
+  @include FlexBoxColumn;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.social{
+  @include FlexBoxColumn;
+  width: 15%;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.icons{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+    img{
+      border: solid 1px gray;
+      border-radius: 5px;
+      width: 100px;
+      height: 50px;
+    }
+}
+
+  @media screen and (max-width: 1699px) {
+    .smallColumn {
+      display: none;
+    }
+
+    .scoreRow{
+      flex-wrap: wrap;
+      overflow-x: scroll;
+    }
+
+    .headStory{
+      margin-top: 10%;
+      width: 55vw;
+      height: 20vh;
+    }
+
+    .primaryColumn{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

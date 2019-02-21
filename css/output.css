@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 500vh;
+  background-color: rgba(180, 140, 30, 0.2); }
+  .mainContainer .navBar {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    height: 75px; }
+    .mainContainer .navBar .navBarLeft {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      .mainContainer .navBar .navBarLeft .logo {
+        display: flex;
+        height: 100%;
+        width: 75px; }
+        .mainContainer .navBar .navBarLeft .logo img {
+          display: flex;
+          height: 100%; }
+      .mainContainer .navBar .navBarLeft .menu {
+        display: flex; }
+    .mainContainer .navBar .navBarMiddle {
+      display: flex;
+      align-items: center;
+      width: 300px; }
+      .mainContainer .navBar .navBarMiddle .teams {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 300px; }
+        .mainContainer .navBar .navBarMiddle .teams .team {
+          display: flex;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400; }
+    .mainContainer .navBar .navBarRight {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0 75px 0 0; }
+      .mainContainer .navBar .navBarRight .downloadPrompt {
+        display: flex; }
+        .mainContainer .navBar .navBarRight .downloadPrompt button {
+          height: 40px;
+          background-color: teal;
+          border-radius: 15px; }
+      .mainContainer .navBar .navBarRight .prompt {
+        display: flex; }
+  .mainContainer .scoreRow {
+    display: flex;
+    width: 75vw;
+    height: 200px;
+    justify-content: center;
+    align-items: center; }
+    .mainContainer .scoreRow .box {
+      display: flex;
+      height: 100px;
+      width: 10vw;
+      margin: 2vw;
+      border: 1px solid black;
+      border-radius: 10px;
+      background-color: rgba(10, 10, 10, 0.3); }
+  .mainContainer .article {
+    flex-direction: row;
+    display: flex;
+    width: 75vw;
+    justify-content: space-around;
+    align-items: center; }
+    .mainContainer .article .articlePic {
+      display: flex;
+      justify-content: center;
+      height: 500px;
+      width: 500px;
+      border: 1px solid black;
+      border-radius: 10px;
+      background-image: url(../img/crab.jpg);
+      background-size: cover;
+      overflow: hidden; }
+      .mainContainer .article .articlePic .articleHeader {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 20px 0 20px 0; }
+  .mainContainer .related {
+    flex-direction: row;
+    display: flex;
+    width: 75vw;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 20px 0 20px 0; }
+    .mainContainer .related .relatedBar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .mainContainer .related .relatedBar .longBar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .mainContainer .related .relatedBar .longBar .line {
+          width: 33%;
+          align-self: center;
+          height: 2px;
+          background-color: grey; }
+        .mainContainer .related .relatedBar .longBar .relatedNews {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 33%; }
+      .mainContainer .related .relatedBar .relatedTabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%; }
+  .mainContainer .more {
+    padding: 10px;
+    margin: 20px 0 20px 0; }
+
+.teaserGrid {
+  display: flex;
+  width: 80vw;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: space-between;
+  flex-wrap: wrap; }
+  .teaserGrid .teaserRow {
+    display: flex;
+    width: 70vw;
+    justify-content: space-around;
+    flex-flow: wrap row; }
+
+.teaserSmall {
+  display: flex;
+  height: 20vw;
+  width: 20vw;
+  margin-bottom: 2vw;
+  border: 2px solid black;
+  border-radius: 5%;
+  background-image: url();
+  background-size: cover; }
+
+@media screen and (max-width: 499px) {
+  .teaserSmall {
+    height: 55vw;
+    width: 55vw; }
+
+  h1 {
+    font-size: 3vw; } }
+@media screen and (max-width: 899px) and (min-width: 500px) {
+  .teaserSmall {
+    height: 33vw;
+    width: 33vw; }
+
+  h1 {
+    font-size: 2vw; } }
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .teaserSmall {
+    height: 20vw;
+    width: 20vw; }
+
+  .mainContainer {
+    height: 2000px; } }
+@media screen and (min-width: 1100px) and (max-width: 1499px) {
+  .teaserSmall {
+    height: 15vw;
+    width: 15vw; }
+
+  .mainContainer {
+    height: 2000px; } }
+@media screen and (min-width: 1500px) {
+  .teaserRow {
+    max-width: 1000px; }
+
+  .teaserSmall {
+    height: 230px;
+    width: 230px; }
+
+  .mainContainer {
+    height: 2000px; } }
+
+/*# sourceMappingURL=output.css.map */
